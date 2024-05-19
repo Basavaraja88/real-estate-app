@@ -51,18 +51,22 @@ const Login: React.FC = () => {
             <input
               className="border p-2 mt-4 w-full"
               type="email"
+              placeholder="Enter email"
               value={email}
               onChange={(e) => handleChange(e.target.value, "email")}
             />
+            <p className=" text-left">You can enter any email</p>
             {emailError && <p>{emailError}</p>}
           </div>
           <div>
             <input
               className="border p-2 mt-4 w-full"
               type="password"
+              placeholder="Enter password"
               value={password}
               onChange={(e) => handleChange(e.target.value, "password")}
             />
+
             {passwordError && <p>{passwordError}</p>}
           </div>
           <div className=" text-left ">
@@ -71,7 +75,9 @@ const Login: React.FC = () => {
               checked={isChecked}
               onChange={handleCheckboxChange}
             />
-            <label className="pl-4">Login as seller</label>
+            <label className="pl-4 font-bold text-lime-500 ">
+              Login as seller (Note)
+            </label>
           </div>
           <Button onClick={handleLogin}>Login</Button>
         </form>
